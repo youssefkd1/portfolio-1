@@ -12,6 +12,24 @@ body{
     background-color: #172127;
     overflow-x: hidden;
 }
+.jq{
+    margin-top: 15px;
+    width:fit-content;
+    padding:7px;
+    background-color: green;
+    text-align: center;
+    color:white
+}
+.notify{
+    background-color: green;
+    color: white;
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 4px;
+    position: fixed;
+    right: -100%;
+    top: 15%;
+}
 .scroll-indicator {
     width: 100%;
     height: 10px;
@@ -60,7 +78,7 @@ body{
 }
 .navbar{
     position: fixed;
-    top: 40px;
+    top: -100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -78,6 +96,8 @@ body{
     padding-right: 400px;
     margin-left: 20px;
     color: #00bfff;
+    position: relative;
+    right: 0;
 }
 .link{
     margin: 20px;
@@ -97,14 +117,22 @@ body{
 }
 .hero-image{
     position: absolute;
-    top: -150px;
+    top: -1000px;
     left: 850px;
     animation: bounce 1s infinite;
 }
+.about-text{
+    font-size: 24px;
+    text-align: center;
+}
 .title{
+    position: relative;
+    left: -150%;
     margin-left: 100px;
 }
 .logo1{
+    position: relative;
+    right: -250%;
     font-size: 40px;
     padding-right: 400px;
     margin-left: 100px;
@@ -114,22 +142,21 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(180deg , #031c3a , #174b8b);
+    background-image: linear-gradient(#333 , #555);
     width: 80%;
     margin-left: 10%;
     border-radius: 50px;
     padding: 100px 0;
-    border: dashed 5px white;
+    border: dashed 5px rgb(112, 0, 0);
 }
 .main-title{
     margin-top: 400px;
     margin-bottom: 40px;
     text-align: center;
     font-size: 45px;
-
 }
 .text-container{
-    margin-left: 50px;
+    margin-left: 50px
 }
 .text{
     color: #00bfff;
@@ -161,6 +188,65 @@ i{
     background-color: transparent;
     color: #00bfff;
 }
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+    background-image: linear-gradient(#333 , #555);
+    width: fit-content;
+    border-radius: 20px;
+    border: 5px dashed #991200;
+    margin-left: 14%;
+}
+.skills1{
+    display: flex;
+}
+.skills2{
+    display: flex;
+}
+.skill{
+    width: fit-content;
+    margin: 30px;
+    transition: all .5s;
+}
+.html{
+    width: 200px;
+    margin-top: 20px;
+    animation: wiggle alternate 1s infinite linear;
+}
+.css{
+    width: 250px;
+    animation: wiggle alternate 1s infinite linear;
+}
+.js{
+    width: 250px;
+    animation: wiggle alternate 1s infinite linear;
+}
+.jquery{
+    width: 250px;
+    animation: wiggle alternate 1s infinite linear;
+}
+.tailwind{
+    width: 250px;
+    animation: wiggle alternate 1s infinite linear;
+}
+.bootstrap{
+    width: 250px;
+    animation: wiggle alternate 1s infinite linear;
+}
+.php{
+    width: 340px;
+    animation: wiggle alternate 1s infinite linear;
+}
+.laravel{
+    width: 340px;
+    margin-top: 40px;
+    margin-left: -100px;
+    animation: wiggle alternate 1s infinite linear;
+}
+
 .contact{
     text-align: center;
     margin-top: 400px;
@@ -244,10 +330,10 @@ footer{
 }
 @keyframes wiggle {
     0% {
-        transform: rotate(-3deg);
+        transform: rotate(-20deg );
     }
     100% {
-        transform: rotate(3deg);
+        transform: rotate(20deg);
     }
 }
 @keyframes bounce {
@@ -276,6 +362,9 @@ footer{
     .library-button{
         margin-left: 200px;
     }
+    .skills{
+        margin-left: 150px;
+    }
 }
 @media (max-width: 1500px) {
     .links{
@@ -293,8 +382,54 @@ footer{
     .library-button{
         margin-left: 280px;
     }
+    .skills{
+        margin-left: 200px;
+    }
+    .html{
+        width: 160px;
+    }
+    .css{
+        width: 200px;
+    }
+    .js{
+        width: 200px;
+    }
+    .jquery{
+        width: 200px;
+    }
+    .tailwind{
+        width: 200px;
+    }
+    .bootstrap{
+        width: 200px;
+    }
+    .php{
+        width: 272px;
+    }
+    .laravel{
+        width: 272px;
+    }
+}
+@media (max-width: 1400px) {
+    .skills{
+        margin-left: 150px;
+    }
 }
 @media (max-width: 1300px) {
+    .skills1 , .skills2{
+        flex-direction: column;
+    }
+    .skills{
+        flex-direction: row;
+    }
+    .tailwind{
+        margin-top: -2500px;
+        margin-bottom: 60px;
+    }
+    .laravel{
+        margin-left: 0;
+        margin-bottom: -200px;
+    }
     .links{
         margin-left: -500px;
     }
@@ -307,10 +442,21 @@ footer{
     .containers{
         flex-direction: column;
     }
+    .skills{
+        margin-left: 275px;
+    }
+}
+@media (max-width: 1200px) {
+    .skills{
+        margin-left: 225px;
+    }
 }
 @media (max-width: 1100px) {
     .hero-image{
         left: 300px;
+    }
+    .skills{
+        margin-left: 190px;
     }
 }
 @media (max-width: 1000px) {
@@ -326,15 +472,69 @@ footer{
     .library-button{
         margin-left: 200px;
     }
+    .link{
+        margin: 5px;
+    }
+    .skills{
+        margin-left: 110px;
+    }
+
 }
 @media (max-width: 850px) {
     .library-button{
         margin-left: 170px;
     }
+    .skills{
+        flex-direction: column;
+    }
+    .tailwind{
+        margin-bottom: 0;
+        margin-left: 50px;
+    }
+    .laravel{
+        margin-left: 0;
+        margin-bottom: 0px;
+    }
+    .bootstrap{
+        margin-left: 50px;
+    }
+    .html{
+        margin-left: 30px;
+    }
+    .skills{
+        margin-left: 240px;
+    }
+    .html{
+        width: 200px;
+    }
+    .css{
+        width: 250px;
+    }
+    .js{
+        width: 250px;
+    }
+    .jquery{
+        width: 250px;
+    }
+    .tailwind{
+        width: 250px;
+    }
+    .bootstrap{
+        width: 250px;
+    }
+    .php{
+        width: 350px;
+    }
+    .laravel{
+        width: 350px;
+    }
 }
 @media (max-width: 768px) {
-    .link{
-        margin: 5px;
+    .links{
+        display: none;
+    }
+    .logo{
+        margin-left: 35%;
     }
     .title , .logo1{
         margin-left: -250px;
@@ -343,26 +543,230 @@ footer{
     .library-button{
         margin-left: 150px;
     }
+    .skills{
+        margin-left: 200px;
+    }
 }
-@media (max-width: 650px) {
-    .links{
-        display: none;
-    }
-    .logo{
-        margin-left: 30%;
-    }
+@media (max-width: 700px) {
+    
+    
     .email , .phone-number{
-        width: 500px;
+        width: 700px;
+        margin-left: 370px;
+    }
+    .contact-title{
+        margin-left: 370px;
+        text-wrap: nowrap;
+    }
+    .main-project{
+        margin-left: 150px;
+        width: 100%;
+    }
+    .main-title{
+        margin-left: 300px;
+        text-wrap: nowrap;
     }
     .library-button{
-        margin-left: 60px;
+        margin-left: 150px;
+    }
+    footer{
+        width: 150%;
+    }
+    .about-text{
+        width: 150%;
+    }
+    .skills{
+        margin-left: 300px;
+    }
+}
+@media (max-width: 650px) {
+    
+    .email , .phone-number{
+        margin-left: 300px;
+    }
+    .contact-title{
+        margin-left: 300px;
+    }
+    .library-button{
+        margin-left: 120px;
+    }
+    .main-project{
+        margin-left: 150px;
+        width: 100%;
+    }
+    .main-title{
+        margin-left: 300px;
+        text-wrap: nowrap;
+    }
+    footer{
+        width: 150%;
+    }
+    .skills{
+        margin-left: 270px;
     }
 }
 @media (max-width: 550px) {
+    
+    .about{
+        margin-left: 130px;
+    }
     .email , .phone-number{
-        width: 400px;
+        width: 600px;
+        margin-left: 250px;
     } 
+    .contact-title{
+        margin-left: 250px;
+    }
     .library-button{
-        margin-left: 40px;
+        margin-left: 190px;
+    }
+    .main-project{
+        margin-left: 90px;
+        width: 120%;
+    }
+    .main-title{
+        margin-left: 250px;
+        text-wrap: nowrap;
+    }
+    .text-container{
+        margin-left: 20px;
+    }
+    .skills{
+        margin-left: 150px;
+    }
+}
+@media (max-width: 450px) {
+    .email , .phone-number{
+        width: 500px;
+        margin-left: 220px;
+    } 
+    .contact-title{
+        margin-left: 220px;
+    }
+    .main-project{
+        margin-left: 100px;
+        width: 120%;
+    }
+    .main-title{
+        margin-left: 220px;
+        text-wrap: nowrap;
+    }
+    .text-container{
+        margin-left: 20px;
+    }
+    .library-button{
+        margin-left: 100px;
+    }
+    footer{
+        width: 160%;
+    }
+    .skills{
+        margin-left: 130px;
+    }
+    
+}
+@media (max-width: 400px) {
+    .email , .phone-number{
+        width: 500px;
+        margin-left: 250px;
+    } 
+    .contact-title{
+        margin-left: 150px;
+    }
+    .main-project{
+        margin-left: 110px;
+        width: 110%;
+    }
+    .main-title{
+        margin-left: 190px;
+        text-wrap: nowrap;
+    }
+    .text-container{
+        margin-left: 20px;
+    }
+    .library-button{
+        margin-left: 100px;
+    }
+    .skills{
+        margin-left: 120px;
+    }
+    footer{
+        width: 160%;
+    }
+
+}
+@media (max-width: 375px) {
+    .contact-title{
+        margin-left: 140px;
+    }
+    .main-project{
+        margin-left: 100px;
+        width: 130%;
+    }
+    .skills{
+        margin-left: 110px;
+    }
+    .main-title{
+        margin-left: 220px;
+        text-wrap: nowrap;
+    }
+    .text-container{
+        margin-left: 15px;
+    }
+    .library-button{
+        margin-left: 100px;
+    }
+    footer{
+        width: 180%;
+    }
+}
+@media (max-width: 350px) {
+    .contact-title{
+        margin-left: 120px;
+    }
+    .main-project{
+        margin-left: 100px;
+        width: 130%;
+    }
+    .main-title{
+        margin-left: 200px;
+        text-wrap: nowrap;
+    }
+    .text-container{
+        margin-left: 15px;
+    }
+    .library-button{
+        margin-left: 100px;
+    }
+    .about-text{
+        width: 170%;
+    }
+}
+@media (max-width: 300px) {
+    .contact-title{
+        margin-left: 100px;
+    }
+    .main-project{
+        margin-left: 80px;
+        width: 150%;
+    }
+    .main-title{
+        margin-left: 140px;
+        text-wrap: nowrap;
+    }
+    .text-container{
+        margin-left: 10px;
+    }
+    .library-button{
+        margin-left: 100px;
+    }
+    footer{
+        width: 200%;
+    }
+    .skills{
+        margin-left: 90px;
+    }
+    .skills-title{
+        margin-left: 250px;
     }
 }

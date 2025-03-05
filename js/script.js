@@ -87,21 +87,48 @@ function callback(entries, observer) {
 }
 
 var home = document.querySelector('#hero');
-var about = document.querySelector('#main-project');
+var main = document.querySelector('#main-project');
 var contact = document.querySelector('#contact');
+var about = document.querySelector('#about');
+var skills = document.querySelector('#skills');
 
 var homeLink = document.querySelector('a[href="#hero"]');
-var aboutLink = document.querySelector('a[href="#main-project"]');
+var mainLink = document.querySelector('a[href="#main-project"]');
 var contactLink = document.querySelector('a[href="#contact"]');
+var aboutLink = document.querySelector('a[href="#about"]');
+var skillsLink = document.querySelector('a[href="#skills"]');
 
 homeLink.addEventListener('click', function() {
     smoothScroll('#hero', 1000);
 });
 
-aboutLink.addEventListener('click', function() {
+mainLink.addEventListener('click', function() {
     smoothScroll('#main-project', 1000);
 });
 
 contactLink.addEventListener('click', function() {
     smoothScroll('#contact', 1000);
 });
+
+aboutLink.addEventListener('click', function() {
+  smoothScroll('#about', 1000);
+});
+
+skillsLink.addEventListener('click', function() {
+  smoothScroll('#skills', 1000);
+});
+
+// jquery animations
+$(document).ready(function(){
+  $('.navbar').animate({'top':'40px'} , 500 , function(){
+      $('.hero-image').animate({'top':'-150px'} , 500 , function(){
+          $('.title').animate({'left':'0'} , 500 , function(){
+              $('.logo1').animate({'right':'0'} , 500 , function(){
+                  $('.notify').animate({'right':'10px'} , 500 , function(){
+                      $(this).delay(2000).fadeOut(500);
+                  })
+              })
+          })
+      })
+  })
+})

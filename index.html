@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is a simple portfolio for web developer">
     <title>Youssef</title>
     <link rel="shortcut icon" href="images/x-icon-youssef-min.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- NOTIFICATION -->
+    <div class="notify">
+        <i class="fa-regular fa-circle-check"></i>
+         Page reloaded successfuly
+    </div>
     <!-- SCROLL INDICATOR -->
     <div class="scroll-indicator">
         <div class="progress"></div>
@@ -21,12 +27,14 @@
         <h1 class="logo">Youssef</h1>
         <div class="links">
             <a href="#hero" class="link">Home</a>
+            <a href="#about" class="link">About</a>
             <a href="#main-project" class="link">Main project</a>
+            <a href="#skills" class="link">Skills</a>
             <a href="#contact" class="link">Contact</a>
         </div>
     </div>
 
-    <!-- HERO CONTAINER -->
+    <!-- HERO SECTION -->
     <div class="hero" id="hero">
         <div class="hero-text">
             <h2 class="title">Hello my name is Youssef</h2>
@@ -34,10 +42,17 @@
             <h2 class="title">frontend developer | backend developer </h2>
         </div>
         <div class="hero-image">
-            <img src="images/sop.webp" width="400" height="350">
+            <img src="images/sop.webp" alt="hero-image" width="400" height="350">
         </div>
     </div>
-
+    <!-- ABOUT-US SECTION -->
+     <h1 class="main-title about-title">About</h1>
+     <div id="about" class="about">
+        <p class="about-text">
+             Hello guys I am youssef and I am a frontend developer and backend developer I have an Accredited certificate from the russian council in egypt for
+            full stack course I have an experience of 2 years in web development but in making projects and websites just for myself like this portfolio
+        </p>
+     </div>
     <!-- MAIN PROJECT SECTION -->
     <h1 class="main-title">Main Project</h1>
     <div class="main-project" id="main-project">
@@ -49,6 +64,41 @@
             <h3 class="text1">very large library of diffrent classes and psuedo elments and psuedo classes</h3>
             <a download class="library-button" href="css/styles.css">Download Demo <i class="fa-solid fa-download"></i></a>
         </div>   
+    </div>
+    <!-- SKILLS SECTION -->
+    <h1 class="main-title skills-title">Skills</h1>
+    <div class="skills" id="skills">
+
+        <div class="skills1">
+            <div class="skill">
+                <img class="html" src="images/html-512.webp" alt="html icon">
+            </div>
+            <div class="skill">
+                <img class="css" src="images/css.png" alt="css icon">
+            </div>
+            <div class="skill">
+                <img class="js" src="images/js.png" alt="js icon">
+            </div>
+            <div class="skill">
+                <img class="jquery" src="images/jquery.png" alt="jquery icon">
+            </div>
+        </div>
+        
+        <div class="skills2">
+            <div class="skill">
+                <img class="tailwind" src="images/tailwind.png" alt="tailwind icon">
+            </div>
+            <div class="skill">
+                <img class="bootstrap" src="images/bootstrap.png" alt="bootstrap icon">
+            </div>
+            <div class="skill">
+                <img class="php" src="images/php.png" alt="php icon">
+            </div>
+            <div class="skill">
+                <img class="laravel" src="images/laravel.png" alt="laravel icon">
+            </div>
+        </div>
+        
     </div>
     <!-- GET IN TOUCH -->
      <div class="contact" id="contact">
@@ -71,7 +121,10 @@
         <p class="footer-text2">Made by <span>Youssef El-Nazer</span></p>
     </footer>
     <!-- INCLUDING JAVASCRIPT FILES -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
-
+    <script>
+        
+    </script>
 </body>
 </html>
