@@ -447,9 +447,7 @@ footer{
     .about-text{
         font-size: 14px;
     }
-    .text1{
-        font-size: 14px;
-    }
+    
 }
 @media (max-width: 1200px) {
     .skills{
