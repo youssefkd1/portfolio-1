@@ -172,11 +172,11 @@ body{
 }
 .library-button{
     text-decoration: none;
-    background-color: #00bfff;
+    background-color: #006586;
     padding: 20px 30px;
     border-radius: 30px;
     transition: 0.3s ease-in-out;
-    border: solid #00bfff 2px;
+    border: solid #006586 2px;
     box-shadow: 0 0 15px rgb(44, 44, 44);
     margin-left: 290px;
 }
@@ -184,9 +184,8 @@ i{
     transition: 0.3s ease-in-out;
 }
 .library-button:hover , .library-button:hover i{
-    color: #00bfff;
+    color: #006586;
     background-color: transparent;
-    color: #00bfff;
 }
 .skills{
     display: flex;
